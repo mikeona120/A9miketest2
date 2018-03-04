@@ -24,20 +24,20 @@
     forestMorning.src = "../sounds/forestMorning.mp3";
     burningLogs.src = "../sounds/burningLogs.mp3";
     whiteNoise.src = "../sounds/whiteNoise.mp3" ;
-    CatMeowing.src = "../sounds/CatMeowing.mp3" ;
-    BeautifulChillMix.src = "../sounds/BeautifulChillMix.mp3" ;
-    Ambulance.src = "../sounds/Ambulance.mp3" ;
+    CatMeowing.src = "../sounds/CatMeowing.m4a" ;
+    BeautifulChillMix.src = "../sounds/BeautifulChillMix.m4a" ;
+    Ambulance.src = "../sounds/Ambulance.m4a" ;
     FrogCroak.src = "../sounds/FrogCroak.mp3" ;
-    OceanWave.src = "../sounds/OceanWave.mp3" ;
-    AirPlane.src = "../sounds/AirPlane.mp3" ;
-    Bee.src = "../sounds/Bee.mp3" ;
-    PublicSwimmingPool.src = "../sounds/PublicSwimmingPool.mp3" ;
-    Fan.src = "../sounds/Fan.mp3" ;
-    LaughingAndGigglingKids.src = "../sounds/LaughingAndGigglingKids.mp3" ;
-    PunchesAndSlaps.src = "../sounds/PunchesAndSlaps.mp3" ;
-    ScaryFootsteps.src = "../sounds/ScaryFootsteps.mp3" ;
-    DogBarking.src = "../sounds/DogBarking.mp3" ;
-    JungleBattleAmbience.src = "../sounds/JungleBattleAmbience.mp3" ;
+    OceanWave.src = "../sounds/OceanWave.m4a" ;
+    AirPlane.src = "../sounds/AirPlane.m4a" ;
+    Bee.src = "../sounds/Bee.m4a" ;
+    PublicSwimmingPool.src = "../sounds/PublicSwimmingPool.m4a" ;
+    Fan.src = "../sounds/Fan.m4a" ;
+    LaughingAndGigglingKids.src = "../sounds/LaughingAndGigglingKids.m4a" ;
+    PunchesAndSlaps.src = "../sounds/PunchesAndSlaps.m4a" ;
+    ScaryFootsteps.src = "../sounds/ScaryFootsteps.m4a" ;
+    DogBarking.src = "../sounds/DogBarking.m4a" ;
+    JungleBattleAmbience.src = "../sounds/JungleBattleAmbience.m4a" ;
 
     //alert sound
     var foghorn = new Audio();

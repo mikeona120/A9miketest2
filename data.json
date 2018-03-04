@@ -83,13 +83,6 @@
     "icon": "fas fa-home",
     "name": "Dog Barking",
     "soundEffectnum": 17
-  },
-  {
-    "color": "color18",
-    "id": "sound18",
-    "icon": "fas fa-bomb",
-    "name": "Jungle Battle",
-    "soundEffectnum": 18
   }
 ],
   "alerts": [
