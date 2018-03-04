@@ -1,0 +1,61 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SoundTrack | Login</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/css/stylesOLD.css">
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<center>
+				<div class="jumbotron">
+					<h1>SoundTrack</h1>
+				</div>
+
+				<div class="mt-4">
+					<i>Log in by using <br>Username: <b>user</b><br>Password: <b>pass</b></i>
+				</div><br>
+
+				<form class="login" role="form" method="get" action="/home">
+					<i class="fas fa-user"></i> &nbsp;<label>Username*: &nbsp;</label>
+					<input type="text" id="username" placeholder="sklemmer" name="name" required></input><br/>
+					<i class="fas fa-key"></i> &nbsp;<label>Password*: &nbsp;</label>
+					<input type="password" id="password" placeholder="hunter2" required></input><br/>
+					<button class="btn btn-outline-primary mt-4" onclick="fakeLogin()">Log in</button>
+				</form>
+				
+
+				<div class="mt-4">
+					<b>Or log in with Facebook!</b>
+					<div class="mt-4">
+						<fb:login-button for="name" scope="public_profile,email" method="get" action="/home" onlogin="checkLoginState();"></fb:login-button>
+					</div>
+				</div>
+
+				<footer>
+					<div class="row">
+						<div class="col-sm-12">
+						</div>
+					</div>
+				</footer>
+
+			</center>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/login.js"></script>
+		{{> facebook}}
+		<script src="/js/facebook.js"></script>
+
+
+	</body>
+	</html>

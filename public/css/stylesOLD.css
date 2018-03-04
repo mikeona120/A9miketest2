@@ -1,0 +1,186 @@
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+h4 {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.btn {
+  white-space: normal;
+}
+
+.btn-outline-secondary {
+  background-color: white;
+}
+
+.black { /* change to "iconColor" later! */
+color: black;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  float: left;
+  padding-right: 6%;
+  padding-left: 6%;
+  display: inline-block;
+}
+
+.float{
+  position:fixed;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width:50%;
+  bottom:6%;
+  right:25%;
+  background-color: #00BCD4;
+  color: white;
+}
+
+.float:hover, .float:active {
+  background-color: #B2EBF2;
+}
+
+.productivity {
+  background-color: #00BCD4; 
+  color: #fff;
+  float:left;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 130%;
+}
+
+.offtask {
+  background-color: #eee; 
+  float:right;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 130%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;   
+  background: #eee;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #00BCD4;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00BCD4;
+  cursor: pointer;
+}
+
+.soundscroll{
+  display:block;
+  top:0;
+  left:0;
+  max-height:auto;
+  margin:0;
+  overflow-y:hidden;
+  overflow-x:auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  width: 80%;
+}
+
+.soundscroll > button{
+  display:inline-block;
+
+}
+
+.squares{
+  width:70%;
+  padding: 1%;
+}
+
+.squares > button{
+  width:25%;
+  height:25%;
+  margin:10px;
+  padding: 4%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1%;
+  height: 6%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightgray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00BCD4;
+  width: 5%; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B2EBF2; 
+}
+
+footer {
+  text-align: center;
+  background-color: white;
+  color: white;
+  padding: 4%;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  h4 {
+    font-size: 120%;
+  }
+  p {
+    font-size: 80%;
+  }
+  li {
+    margin: 1%;
+  }
+  footer {
+    padding: 8%;
+    margin-top: 0%;
+  }
+  .float{
+    bottom:2%;
+  }
+  .squares > button{
+    width: 30%;
+  }
+
+}

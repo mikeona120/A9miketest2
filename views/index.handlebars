@@ -1,0 +1,153 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115042202-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115042202-1');
+</script>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='170799083-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+
+		<title>SoundTrack | Start</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<div class="container">
+			<center>
+				<div class="row mt-4">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4"><h1>SoundTrack</h1>
+					</div>
+					<div class="col-sm-4">
+					{{#if viewOLD}}
+						<ul>
+							<li><i id="HelpButtonOLD" class="fas fa-info-circle fa-lg" onclick="helpStart()" onmouseover="" style="cursor: pointer;"></i><p onclick="helpStart()" onmouseover="" style="cursor: pointer;">Help</p></li>
+							<li><a id="ProfileButtonOLD" href="profile" class="black" disabled><i class="fas fa-user fa-lg"></i><p>Profile</p></a></li>
+							<li><a id="LogoutButtonOLD" href="/" class="black"><i class="fas fa-sign-out-alt fa-lg"></i><p>Logout</p></a></li>
+						</ul>
+					{{/if}}
+					</div>
+				</div>
+
+
+				
+				<h4 data-toggle="tooltip" title="Get your head in the game! Choose a relaxing sound for your work session.">Select a Soundscape</h4>
+
+				<div class="soundscroll squares" id="scroll1">
+					{{#each soundscapes}} 
+					<button class="btn btn-outline-secondary scape {{color}} btn-grad" onclick="soundEffect({{soundEffectnum}})" id="{{id}}"><i class='{{icon}} fa-lg'></i><br>{{name}}</button>
+					{{/each}}
+				</div>
+
+				<br>
+				<h4 data-toggle="tooltip" title="The sound that will play whenever you're off-task for too long">Select an Alert Sound</h4>
+				<div class="soundscroll squares" id="scroll2">
+					{{#each alerts}} 
+					<button class="btn btn-outline-secondary alarm {{alarm}} btn-grad" onclick="soundEffect({{soundEffectnum}})" id="{{id}}"><i class='{{icon}} fa-lg'></i><br>{{name}}</button>
+					{{/each}}
+				</div>
+
+
+
+				<div class="row">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8 alertperiod">
+						<!-- Alert Period: change minimum to 30 seconds? Link to Alert Settings later-->
+						<h4 data-toggle="tooltip" title="The amount of time between each alert">Set Alert Period to: <span id="alerttime">3</span> minutes</h4>
+						
+
+				<!-- 	<div class="slidecontainer">
+						<input type="range" min="1" max="5" value="3" class="slider" id="alertRange" oninput="updateAlertTime(this.value)">
+					</div> -->
+					<!-- CONVERT TO JSON LATER-->
+					<div class="btn-group btn-group-toggle " data-toggle="buttons">
+						<label class="btn btn-secondary">
+							<input type="radio" name="options" id="option1" autocomplete="off" checked onchange="updateAlertTime(1)"> 1
+						</label>
+						<label class="btn btn-secondary">
+							<input type="radio" name="options" id="option2" autocomplete="off"  onchange="updateAlertTime(2)"> 2
+						</label>
+						<label class="btn btn-secondary active">
+							<input type="radio" name="options" id="option3" autocomplete="off" onchange="updateAlertTime(3)"> 3
+						</label>
+						<label class="btn btn-secondary">
+							<input type="radio" name="options" id="option4" autocomplete="off" onchange="updateAlertTime(4)"> 4
+						</label>
+						<label class="btn btn-secondary">
+							<input type="radio" name="options" id="option5" autocomplete="off" onchange="updateAlertTime(5)"> 5
+						</label>
+					</div>
+
+				</div>
+				<div class="col-sm-4 breaktime">
+					<h4 class="downtime-text" data-toggle="tooltip" title="The amount of time you allow yourself for goofing off for this work session">Set Total Break Time to: <span id="downtime">20</span> minutes</h4>
+					
+
+					<div class="slidecontainer">
+						<input type="range" min="1" max="40" value="20" class="slider" id="downtimeRange" oninput="updateTimeRange(this.value)">
+					</div>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<!-- Start working -->
+			<a id="StartWorking" href="screen2" class="btn btn-outline-light float disabled" role="button" aria-pressed="true" aria-disabled="true" onclick="resetPTimer()">Start Working!</a>
+
+
+{{#if viewNEW}}
+<div class="container-fluid">
+				<div class="row icons">
+					<div id="SettingsButtonNEW" class="col-3"><a href="#" class="black"><i class="fas fa-cogs fa-lg"></i><p>Settings</p></a></div>
+					<div id="HelpButtonNEW" class="col-3"><i class="fas fa-info-circle fa-lg" onclick="helpStart()" onmouseover="" style="cursor: pointer;"></i><p onclick="helpStart()" onmouseover="" style="cursor: pointer;">Help</p></div>
+					<div id="ProfileButtonNEW" class="col-3"><a href="profile" class="white" disabled><i class="fas fa-user fa-lg"></i><p>Profile</p></a></div>
+					<div id="LogoutButtonNEW" class="col-3"><a href="/" class="white"><i class="fas fa-sign-out-alt fa-lg"></i><p>Logout</p></a></div>
+				</div>
+			</div>
+		</center>
+{{/if}}
+
+
+	</div>
+<!-- 	<footer>
+		<div class="row">
+			<div class="col-sm-12">
+
+			</div>
+		</div>
+	</footer> -->
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/index.js"></script>
+	<script src="/js/sounds.js"></script>
+
+
+</body>
+</html>

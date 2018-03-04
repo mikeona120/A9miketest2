@@ -1,0 +1,417 @@
+body {
+  font-family: 'Dosis', sans-serif;
+  /*background-image: url(http://i.imgur.com/6DIkAXD.gif);*/
+  background-image: url(http://annstreetstudio.com/wp-content/uploads/2014/02/Turntable-980.gif);
+  background-size: cover;
+    color: #fff;
+
+}
+
+html, body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+h4 {
+  font-size: 130%;
+  font-weight: bold;
+
+}
+
+.btn {
+  white-space: normal;
+}
+
+.btn-outline-secondary {
+  background-color: white;
+}
+
+.white { /* change to "iconColor" later! */
+color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+/*ul {
+  text-align: center;
+}
+
+li {
+  float: left;
+  padding-right: 6%;
+  padding-left: 6%;
+  display: inline-block;
+  }*/
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+  }
+
+  ul li {
+    padding-right: 4%;
+  }
+
+.icons i {
+    padding-bottom: 2%;
+    padding-top: 12%;
+  }
+
+.icons {
+    position:fixed;
+    padding-bottom: 0;
+    width:100%;
+    bottom: 0;
+    right:1%;
+    background-color: #333;
+    color: white;
+  }
+
+  .icons p {
+    padding-bottom: 0;
+    margin-bottom: 10%;
+  }
+
+  .activeIcon {
+    background-color: #00BCD4;
+  }
+
+/* Start Working/All Done button */
+  .float {
+    position:fixed;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+    width:50%;
+    bottom:16%;
+    right:25%;
+    background-color: #00BCD4;
+    color: white;
+  }
+
+  .float:hover, .float:active {
+    background-color: #B2EBF2;
+  }
+
+/* Timers on screen 2*/
+  .productivity {
+    background-color: #00BCD4; 
+    color: #fff;
+    float:left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 130%;
+  }
+
+  .offtask {
+    background-color: #333; 
+    float:right;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 130%;
+  }
+
+/* Sound settings */
+  .alertperiod {
+    float:left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .breaktime {
+    float:right;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 15px;
+    border-radius: 5px;   
+    background: lightgray;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #00BCD4;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #00BCD4;
+    cursor: pointer;
+  }
+
+/* Sound selectors */
+  .soundscroll{
+    display:block;
+    top:0;
+    left:0;
+    max-height:auto;
+    margin:0;
+    overflow-y:hidden;
+    overflow-x:auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    width: 80%;
+  }
+
+  .soundscroll > button{
+    display:inline-block;
+
+  }
+
+  .squares{
+    width:80%;
+    padding: 1%;
+  }
+
+  .squares > button{
+    width:25%;
+    height:25%;
+    margin:10px;
+    padding: 4%;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 1%;
+    height: 6%;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00BCD4;
+    width: 5%; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B2EBF2; 
+  }
+
+/* Invisible footer */
+  footer {
+    text-align: center;
+    background-color: white;
+    color: white;
+    padding: 6%;
+    margin-top: 2%;
+    margin-bottom: 0;
+  }
+
+    /* Color of placeholder */
+  input::-webkit-input-placeholder {
+    color: #ddd !important;
+  }
+
+  input:-moz-placeholder { /* Firefox 18- */
+    color: #ddd !important;  
+  }
+
+  input::-moz-placeholder {  /* Firefox 19+ */
+    color: #ddd !important;  
+  }
+
+  input:-ms-input-placeholder {  
+    color: #ddd !important;  
+  }
+
+
+/* Media Queries */
+  @media (max-width: 500px) {
+    h4 {
+      font-size: 120%;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 80%;
+    }
+    li {
+      margin: 1%;
+    }
+    .icons i {
+      padding-top: 20%;
+    }
+    .icons {
+      right: 4%;
+    }
+    .icons p {
+        margin: 5%;
+    }
+    footer {
+      padding: 18%;
+      margin-top: 0%;
+    }
+    .float{
+      bottom:12%;
+      padding: 3%;
+    }
+    .squares > button{
+      width: 30%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 3px;
+
+    }
+    /*.color1 
+    { 
+      background: #FF8C00; 
+    }
+    .color2 
+    { 
+      background: #FF8C00; 
+    }
+    .color3 
+    { 
+      background: #FF8C00; 
+    }
+    .color4 
+    { 
+      background: #FF8C00; 
+    }
+    .color6 
+    { 
+      background: #FF8C00; 
+    }
+    .color7 
+    { 
+      background: #FF8C00; 
+    }
+    .color8 
+    { 
+      background: #FF8C00; 
+    }
+    .color11 
+    { 
+      background: #FF8C00; 
+    }
+    .color12 
+    { 
+      background: #FF8C00; 
+    }
+    .color14 
+    { 
+      background: #FF8C00; 
+    }
+    .color16 
+    { 
+      background: #FF8C00; 
+    }
+    .color17 
+    { 
+      background: #FF8C00; 
+    }
+    .color18 
+    { 
+      background: #FF8C00; 
+    }
+
+    .alarm19
+    { 
+      background: #FF1493; 
+    }
+    .alarm20 
+    { 
+      background: #FF1493; 
+    }
+    .alarm21 
+    { 
+      background: #FF1493; 
+    }
+    .alarm22 
+    { 
+      background: #FF1493; 
+    }
+    .alarm23 
+    { 
+      background: ##FF1493; 
+    }
+    .alarm24 
+    { 
+      background: #FF1493; 
+    }
+    .alarm25 
+    { 
+      background: #FF1493; 
+    }
+    .alarm26 
+    { 
+      background: #FF1493; 
+    }
+    .alarm27 
+    { 
+      background: #FF1493; 
+    }
+    .alarm28 
+    { 
+      background: #FF1493; 
+    }
+    .alarm29 
+    { 
+      background: #FF1493; 
+    }
+    .alarm30 
+    { 
+      background: #FF1493; 
+    }
+    .alarm31 
+    { 
+      background: #FF1493; 
+    }
+      .alarm32 
+    { 
+      background: #FF1493; 
+    }
+      .alarm33 
+    { 
+      background: #FF1493; 
+    }
+      .alarm34 
+    { 
+      background: #FF1493; 
+    }
+      .alarm35 
+    { 
+      background:  #FF1493; 
+    }
+      .alarm36 
+    { 
+      background:  #FF1493; 
+    }
+*/
+
+
+  }
+
+#Testmessage{
+  color: lightgreen;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

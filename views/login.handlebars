@@ -1,0 +1,73 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115042202-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115042202-1');
+</script>
+
+		<title>SoundTrack | Login</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="/css/login.css">
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<center>
+
+				<div class="row mt-4">
+					<div class="col-sm-12">
+					<h1>SoundTrack</h1>
+				</div>
+
+</div>
+
+				<div>
+					Log in by using <br>Username: <b>user</b><br>Password: <b>pass</b>
+				</div>
+<br>
+				<form class="login" role="form" method="get" action="/home">
+					<i class="fas fa-user"></i> &nbsp;<label>Username*:&nbsp;</label>
+					<input type="text" id="username" placeholder="sklemmer" name="name" required></input><br/>
+					<i class="fas fa-key"></i> &nbsp;<label>Password*: &nbsp;</label>
+					<input type="password" id="password" placeholder="hunter2" required></input><br/>
+					<button class="btn btn-outline-primary mt-4" onclick="fakeLogin()">Log in</button>
+				</form>
+		
+
+				<div class="mt-4">
+					<b>Or log in with Facebook!</b>
+					<div class="mt-4">
+						<fb:login-button for="name" scope="public_profile,email" method="get" action="/home" onlogin="checkLoginState();"></fb:login-button>
+					</div>
+				</div>
+				<br>
+				<div id="Testmessage">
+					To users: <br>Please disable all adblockers!<br>SoundTrack is best viewed in a mobile format.<br> To do so, press Ctrl + Shift + I or right click and "Inspect".<br>Once you have logged in, we ask that you please find a way to check your profile as part of our test.<br> Feel free to explore the app after that! <br> Send any feedback to mona@ucsd.edu  <br>Thanks!
+				</div>
+
+			</center>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/login.js"></script>
+		{{> facebook}}
+		<script src="/js/facebook.js"></script>
+
+
+	</body>
+	</html>
